@@ -34,7 +34,7 @@ useEffect(() => {
 
   // Initialize socket once
   useEffect(() => {
-    socketRef.current = io("https://your-render-url.onrender.com")
+    socketRef.current = io("https://chat-app-ivjq.onrender.com")
 
     socketRef.current.emit("join", { token, room })
 
