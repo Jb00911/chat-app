@@ -132,7 +132,7 @@ io.on("connection", (socket) => {
 app.use(express.json())
 app.use("/api/auth", authRoutes)
 
-httpServer.listen(3001, () => {
-  console.log('Server running on http://localhost:3001');
-});
-
+const PORT = process.env.PORT || 3001
+httpServer.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
+})
