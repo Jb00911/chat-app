@@ -27,9 +27,10 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:5173", // frontend address
+    origin: "*", // temporary for deployment
     methods: ["GET", "POST"]
   }
+})
 });
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Atlas connected"))
